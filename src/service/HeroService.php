@@ -1,9 +1,13 @@
 <?php
+namespace App\service;
+use App\Entity\Hero;
+
 
 class HeroService{
     private $_listeheros =[];
 
-    function constructor(){
+    function __construct()
+    {
         $hommePoubelle = new Hero("jean Jacque", "Dupond", "L'homme-poubelle", false, "Ne connait pas le tri selectif");
         $superClodo = new Hero("Maurice", "Robert", "Super-Clodo", false, "Il n'as pas de planque fixe");
         $Miso = new Hero("Bernard", "De la Rivière", "Miso", true, "Passe son temps à manquer de respect aux femmes");

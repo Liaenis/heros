@@ -106,7 +106,7 @@ class Hero
         return $this;
     }
 
-    function constructor($pFirstName, $pName, $pPseudo, $pIsEvil, $pDescription){
+    function __construct($pFirstName, $pName, $pPseudo, $pIsEvil, $pDescription){
         $this->description = $pDescription;
         $this->isEvil = $pIsEvil;
         $this->name = $pName;
