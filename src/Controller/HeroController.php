@@ -14,6 +14,7 @@ class HeroController extends AbstractController
     public function index(HeroService $pHeroService): Response{
         return $this->render('hero/index.html.twig', [
             'controller_name' => 'HeroController',
+            'listeHeros' => $listeHeros
         ]);
     }
 }

@@ -9,12 +9,13 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
+    <h1>Hello {{ controller_name }}! ✅</h1>
+    <p> Nos personnages du terroire de Paumé-sur-Bled </p>
     <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/stagiaire/Documents/symfony/heros/src/Controller/HeroController.php'|file_link(0) }}">src/Controller/HeroController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/stagiaire/Documents/symfony/heros/templates/hero/index.html.twig'|file_link(0) }}">templates/hero/index.html.twig</a></code></li>
+        {% for hero in listeheros %}
+            <li>{{hero.pseudo}} est {{hero.firstname}} {{hero.name}}</li>
+        {% endfor %}
     </ul>
 </div>
 {% endblock %}
