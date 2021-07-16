@@ -11,8 +11,7 @@ class HeroController extends AbstractController
     /**
      * @Route("/hero", name="hero")
      */
-    public function index(): Response
-    {
+    public function index(HeroService $pHeroService): Response{
         return $this->render('hero/index.html.twig', [
             'controller_name' => 'HeroController',
         ]);
